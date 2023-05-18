@@ -1,0 +1,26 @@
+.container{
+    height: 355px;
+    background-image: url('../../../assets/images/1635653.jpg');
+    background-size: cover;    
+}
+.mainContain{
+    margin-top: -7%;
+    color: rgb(212, 230, 230);
+    }
+.clock{
+    padding: 10%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+h1{
+    text-shadow: 3px 8px 8px rgba(220, 222, 226, 0.6);
+    font-size:500%;
+}
+.seconds{
+    margin-left: 5%;
+    font-size: 50%;
+}
+
+.day{
+    margin-left: 5%;
+    position: fixed;
+}
