@@ -5,7 +5,8 @@ function Clock() {
   const [time, setTime] = useState(new Date());
   let [day, setDay] = useState("AM");
 
-  useEffect(() => {
+
+useEffect(() => {
     const interval = setInterval(() => {
       setTime(new Date());
     }, 1000);
@@ -18,9 +19,9 @@ function Clock() {
   if (hours > 12) {
     hours = hours - 12;
   }
-  if (hours <= 12) {
+  if (hours >= 12) {
     day = "PM";
-  } else if (hours === 0) {
+  }if (hours === 0) {
     hours = 12;
   }
 
