@@ -3,8 +3,8 @@ import "../../dashboard/styles/my_clock.css";
 
 function Clock() {
   const [time, setTime] = useState(new Date());
-  let [day, setDay] = useState("AM");
-
+  const [day, setDay] = useState("PM");
+  // setDay("AM")
 
 useEffect(() => {
     const interval = setInterval(() => {
@@ -16,12 +16,16 @@ useEffect(() => {
   let hours = time.getHours();
   let minutes = time.getMinutes();
   let seconds = time.getSeconds();
+useEffect(()=>{
+  hours <= 12 && day === "PM"? setDay("AM"): setDay("PM") ;
+}, [])
+  
+
   if (hours > 12) {
     hours = hours - 12;
   }
-  if (hours >= 12) {
-    day = "PM";
-  }if (hours === 0) {
+
+  if (hours === 0) {
     hours = 12;
   }
 
